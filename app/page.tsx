@@ -16,20 +16,20 @@ export default async function Home() {
 
 
 
-  const getUserDetails = async () => {
-    await new Promise((r) => setTimeout(r, 5000));
-    // const response = await axios.get("https://week-13-offline.kirattechnologies.workers.dev/api/v1/user/details");
-    const response = await axios.get("http://localhost:3000/api/user");
+  // const getUserDetails = async () => {
+  //   await new Promise((r) => setTimeout(r, 5000));
+  //   // const response = await axios.get("https://week-13-offline.kirattechnologies.workers.dev/api/v1/user/details");
+  //   const response = await axios.get("http://localhost:3000/api/user");
+  //   console.log("RESPONSE", response.data);
+  //   return response.data;
+  //   //  .then(response => {
+  //   //   setUserdData(response.data);
+  //   //   setLoading(false);
+  //   // })
+  // }
 
-    return response.data;
-    //  .then(response => {
-    //   setUserdData(response.data);
-    //   setLoading(false);
-    // })
-  }
-
-  const data = await getUserDetails();
-  console.log("DATA", data);
+  // const data = await getUserDetails();
+  // console.log("DATA", data);
 
   // if (loading) {
   //   return <Skeleton />
@@ -39,10 +39,10 @@ export default async function Home() {
     <div className="w-screen h-screen flex justify-center items-center border-2 border-black ">
       <div className="w-sm  p-4 border-2 border-gray-500 rounded-md ">
         <div className="text-lg h-8 p-1  text-black font-semibold mb-2">
-          Username: {data?.name}
+          Username
         </div>
         <div className="text-lg h-8 p-1  text-black font-semibold">
-          Email: {data?.email}
+          Email
         </div>
       </div>
     </div>
